@@ -3,7 +3,7 @@ require 'json'
 package = JSON.parse(File.read(File.join(__dir__, 'package.json')))
 
 Pod::Spec.new do |s|
-  s.name          = package["name"]
+  s.name          = "RNPdfScanner"
   s.version       = package["version"]
   s.summary       = package["description"]
   s.homepage      = "https://github.com/Michaelvilleneuve/react-native-document-scanner"
@@ -13,5 +13,5 @@ Pod::Spec.new do |s|
   s.source        = { :git => "#{s.homepage}", :tag => "#{s.version}" }
   s.source_files  = "ios/**/*.{h,m}"
   s.requires_arc  = true
-  s.dependency 'React'
+  s.dependency 'React Core'
 end
